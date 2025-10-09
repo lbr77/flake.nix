@@ -62,6 +62,8 @@
         NSAutomaticSpellingCorrectionEnabled = false;  # disable auto spelling correction(自动拼写检查)
         NSNavPanelExpandedStateForSaveMode = true;  # expand save panel by default(保存文件时的路径选择/文件名输入页)
         NSNavPanelExpandedStateForSaveMode2 = true;
+
+        "com.apple.keyboard.fnState" = true;  # enable F1, F2, etc. keys as standard function keys
       };
 
       CustomUserPreferences = {
@@ -87,6 +89,11 @@
         };
         "com.apple.spaces" = {
           "spans-displays" = 0; # Display have seperate spaces
+        };
+        "com.apple.CrashReporter" = {
+          DialogType = "none"; # disable crash report dialog
+          UseUNC = false; # do not send crash report to Apple
+          AutoSubmit = false;
         };
         "com.apple.WindowManager" = {
           EnableStandardClickToShowDesktop = 0; # Click wallpaper to reveal desktop
@@ -135,10 +142,12 @@
       material-design-icons
       font-awesome
 
-      nerd-fonts.symbols-only 
+      nerd-fonts.symbols-only
       nerd-fonts.fira-code
       nerd-fonts.jetbrains-mono
       nerd-fonts.iosevka
     ];
   };
+
+  
 }

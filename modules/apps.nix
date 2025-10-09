@@ -20,7 +20,12 @@
   environment.systemPackages = with pkgs; [
     neovim
     git
-    just # use Justfile to simplify nix-darwin's commands
+    cmake
+    uv
+    wget
+    nodejs
+    pnpm
+    bun
   ];
   environment.variables.EDITOR = "nvim";
 
