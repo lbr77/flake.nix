@@ -70,7 +70,8 @@
       "wechat"
       "telegram"
       "discord"
-
+      "wetype"
+      "winbox"
       "iina" # video player
       "raycast" # (HotKey: alt/option + space)search, caculate and run scripts(with many plugins)
       "stats" # beautiful system monitor
