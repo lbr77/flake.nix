@@ -45,7 +45,6 @@
         ./modules/nix-core.nix
         ./modules/system.nix
         ./modules/apps.nix
-        ./modules/options.nix
         ./modules/homebrew-mirror.nix
         ./modules/host-users.nix
 
