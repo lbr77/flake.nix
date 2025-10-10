@@ -26,6 +26,10 @@
     nodejs
     pnpm
     bun
+
+    # 从 pkgs 文件夹导入的自定义包
+    # 取消下面的注释来安装自定义应用（需要先配置正确的下载地址和 sha256）
+    torrent-vibe
   ];
   environment.variables.EDITOR = "nvim";
 

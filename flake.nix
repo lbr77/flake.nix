@@ -33,6 +33,12 @@
     system = "aarch64-darwin";
     hostname = "libr-macbook-air";
 
+    # 创建自定义包的 overlay
+    pkgsOverlay = final: prev: let
+      customPkgs = import ./pkgs {pkgs = prev;};
+    in
+      customPkgs;
+
     specialArgs =
       inputs
       // {
@@ -42,6 +48,11 @@
     darwinConfigurations."${hostname}" = darwin.lib.darwinSystem {
       inherit system specialArgs;
       modules = [
+        # 添加自定义包 overlay
+        {
+          nixpkgs.overlays = [pkgsOverlay];
+        }
+
         ./modules/nix-core.nix
         ./modules/system.nix
         ./modules/apps.nix
