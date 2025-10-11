@@ -14,6 +14,7 @@
     # custom
 
     torrent-vibe
+    picgo
   ];
   environment.variables.EDITOR = "nvim";
 
@@ -53,6 +54,9 @@
       "wechat"
       "telegram"
       "discord"
+      "typora"
+      "zotero"
+      # "picgo"
       "wetype"
       "winbox"
       "iina" # video player
