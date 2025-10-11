@@ -12,10 +12,23 @@ stdenvNoCC.mkDerivation rec {
   
   src = fetchurl {
     url = "https://github.com/Molunerfinn/PicGo/releases/download/v${version}/PicGo-${version}-arm64.dmg";
-    sha256 = "sha256-Pp8b54Ce2M1yOIuiBukgMxJ/JPXCvqtWl+nnI7UEK4E=";
+    sha256 = "sha256-3fWkd68pXPn/vKGjZTYIntFEFHo9ggqZt8jnwePpB6U=";
   };
 
-  nativeBuildInputs = [ undmg ];
+  unpackCmd = ''
+        echo "Attaching DMG..."
+        mnt=$(mktemp -d)
+        # trap "/usr/bin/hdiutil detach $mnt -force; rm -rf $mnt" EXIT
+        /usr/bin/hdiutil attach -nobrowse -readonly $src -mountpoint "$mnt"
+        echo Pwd is $(pwd), mnt is $mnt
+        echo "Copying *.app to current dir"
+        cp -R "$mnt"/*.app $(pwd)
+        echo "Copied"
+        ls $mnt
+        /usr/bin/hdiutil detach $mnt -force;
+        ls $(pwd)
+        
+    '';
 
   sourceRoot = ".";
 
@@ -26,7 +39,12 @@ stdenvNoCC.mkDerivation rec {
     ls
     cp -r *.app $out/Applications
 
-    runHook postInstall
+    # runHook postInstall
+  '';
+
+  fixupPhase = ''
+    
+    rm -rf $mnt
   '';
 
   meta = with lib; {
