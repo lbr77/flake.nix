@@ -27,7 +27,6 @@ stdenvNoCC.mkDerivation rec {
         ls $mnt
         /usr/bin/hdiutil detach $mnt -force;
         ls $(pwd)
-        
     '';
 
   sourceRoot = ".";

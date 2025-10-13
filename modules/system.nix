@@ -17,6 +17,7 @@
         show-recents = false;  # disable recent apps
 
         # customize Hot Corners(触发角, 鼠标移动到屏幕角落时触发的动作)
+        wvous-tr-corner = 12; # top-right - Notification Center
         wvous-tl-corner = 2;  # top-left - Mission Control
         wvous-bl-corner = 3;  # bottom-left - Application Windows
         wvous-br-corner = 4;  # bottom-right - Desktop
@@ -136,6 +137,14 @@
   environment.shells = [
     pkgs.zsh
   ];
+
+  power = {
+    sleep = {
+      allowSleepByPowerButton = true; # allow sleep by power button
+      computer = "never"; # sleep after () minutes of inactivity (never !)
+      display = 15; # turn off display after () minutes of inactivity
+    };
+  };
 
   fonts = {
     packages = with pkgs; [

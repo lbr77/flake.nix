@@ -4,6 +4,11 @@
     enableCompletion = true;
     initContent = ''
       export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin"
+      export PATH="/Library/TeX/texbin:$PATH"
+      [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && source $(brew --prefix)/etc/profile.d/autojump.sh
+      source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+      source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+      # source $(brew --prefix)/share/zsh-completions/
     '';
   };
 

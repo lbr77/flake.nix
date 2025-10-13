@@ -35,6 +35,12 @@
       "curl" 
       "cmake" # Fuck you apple. 
       "aria2"
+
+      "autojump"
+      "zsh-autosuggestions"
+      "zsh-syntax-highlighting"
+      "zsh-completions"
+      "terminal-notifier"
     ];
 
     casks = [
@@ -57,6 +63,7 @@
       "typora"
       "zotero"
       # "picgo"
+      "mactex"
       "wetype"
       "winbox"
       "iina" # video player
