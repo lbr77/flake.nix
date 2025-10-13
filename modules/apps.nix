@@ -49,6 +49,7 @@
       "alt-tab"
       "claude-code"
       "feishu"
+      "orbstack"
       "obs"
       "logi-options+"
       "termius"
