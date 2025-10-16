@@ -70,6 +70,8 @@
         NSNavPanelExpandedStateForSaveMode2 = true;
 
         "com.apple.keyboard.fnState" = true;  # enable F1, F2, etc. keys as standard function keys
+
+        AppleInterfaceStyleSwitchesAutomatically = false; # disable auto dark mode
       };
 
       CustomUserPreferences = {
