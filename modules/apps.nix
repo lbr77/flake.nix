@@ -7,14 +7,14 @@
     git
     cmake
     uv
+    ffmpeg
     wget
     nodejs
     pnpm
     bun
-    # custom
-
     torrent-vibe
     picgo
+    swiftformat
   ];
   environment.variables.EDITOR = "nvim";
 
@@ -35,12 +35,16 @@
       "curl" 
       "cmake" # Fuck you apple. 
       "aria2"
-
+      "go"
+      "codex"
+      "rsync"
       "autojump"
       "zsh-autosuggestions"
       "zsh-syntax-highlighting"
       "zsh-completions"
       "terminal-notifier"
+
+      "python@3.13"
     ];
 
     casks = [
@@ -52,6 +56,7 @@
       "orbstack"
       "obs"
       "logi-options+"
+      "xcodes-app"
       "termius"
       "notion"
       "font-maple-mono-nf"
