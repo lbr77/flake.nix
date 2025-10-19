@@ -3,4 +3,5 @@
   # 示例：从 GitHub release 下载的应用
   torrent-vibe = pkgs.callPackage ./torrent-vibe.nix {};
   picgo = pkgs.callPackage ./picgo.nix {};
+  fscan = pkgs.callPackage ./fscan.nix {};
 }

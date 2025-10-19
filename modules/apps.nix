@@ -19,6 +19,7 @@
     picgo
     pwntools
     swiftformat
+    fscan
   ];
   environment.variables.EDITOR = "nvim";
 
