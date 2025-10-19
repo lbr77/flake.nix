@@ -22,6 +22,7 @@
     fscan
     codex
     claude-code
+    ripgrep
   ];
   environment.variables.EDITOR = "nvim";
 
