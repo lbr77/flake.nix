@@ -13,7 +13,11 @@
     pnpm
     bun
     torrent-vibe
+    spicetify-cli
+    android-tools
+    jadx
     picgo
+    pwntools
     swiftformat
   ];
   environment.variables.EDITOR = "nvim";
@@ -45,6 +49,9 @@
       "terminal-notifier"
 
       "python@3.13"
+
+      "unicorn"
+
     ];
 
     casks = [
@@ -53,6 +60,7 @@
       "alt-tab"
       "claude-code"
       "feishu"
+      "macfuse" 
       "orbstack"
       "obs"
       "logi-options+"

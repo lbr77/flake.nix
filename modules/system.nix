@@ -2,7 +2,6 @@
 {
   security.pam.services.sudo_local.touchIdAuth = true;
   security.sudo = {
-    keepTerminfo = true;
     extraConfig = ''
       Defaults timestamp_timeout=30
     '';
