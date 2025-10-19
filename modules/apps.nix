@@ -20,6 +20,8 @@
     pwntools
     swiftformat
     fscan
+    claude-code
+    codex
   ];
   environment.variables.EDITOR = "nvim";
 
@@ -59,7 +61,6 @@
       "google-chrome"
       "visual-studio-code"
       "alt-tab"
-      "claude-code"
       "feishu"
       "macfuse" 
       "orbstack"
