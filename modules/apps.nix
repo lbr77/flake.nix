@@ -21,7 +21,6 @@
     swiftformat
     fscan
     claude-code
-    codex
   ];
   environment.variables.EDITOR = "nvim";
 
@@ -51,7 +50,7 @@
       "terminal-notifier"
 
       "python@3.13"
-
+      "codex"
       "unicorn"
 
     ];
