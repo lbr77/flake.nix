@@ -20,6 +20,7 @@
     pwntools
     swiftformat
     fscan
+    codex
     claude-code
   ];
   environment.variables.EDITOR = "nvim";

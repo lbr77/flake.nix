@@ -4,4 +4,5 @@
   torrent-vibe = pkgs.callPackage ./torrent-vibe.nix {};
   picgo = pkgs.callPackage ./picgo.nix {};
   fscan = pkgs.callPackage ./fscan.nix {};
+  codex = pkgs.callPackage ./codex.nix {};
 }
