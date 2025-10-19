@@ -43,7 +43,6 @@
       "cmake" # Fuck you apple. 
       "aria2"
       "go"
-      "codex"
       "rsync"
       "autojump"
       "zsh-autosuggestions"
