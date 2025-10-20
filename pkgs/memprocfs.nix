@@ -3,6 +3,7 @@
     stdenv,
     fetchurl,
     unzip,
+    makeWrapper
 }:
 
 stdenv.mkDerivation rec {
@@ -14,7 +15,7 @@ stdenv.mkDerivation rec {
         sha256 = "sha256-BO+unIlpf71wsrqxJJns/MjQ4GuespfTwrE4fQbtdXA=";
     };
 
-    nativeBuildInputs = [ unzip ];
+    nativeBuildInputs = [ unzip makeWrapper ];
 
     unpackPhase = ''
         mkdir source
