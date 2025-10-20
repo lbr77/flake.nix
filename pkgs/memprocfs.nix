@@ -24,48 +24,17 @@ stdenv.mkDerivation rec {
     '';
 
     installPhase = ''
-        mkdir -p $out/bin $out/lib/plugins $out/share/memprocfs
+        mkdir -p $out/share/memprocfs $out/bin
 
-        # 主程序
-        cp memprocfs $out/bin/
-        chmod +x $out/bin/memprocfs
+        # 全部内容保持原始结构
+        cp -r ./* $out/share/memprocfs/
 
-        # 动态库
-        cp leechcore_ft601_driver_macos.dylib $out/lib/
-        cp leechcore.dylib $out/lib/
-        cp libftd3xx.dylib $out/lib/
-        cp libMSCompression.dylib $out/lib/
-        cp libpdbcrust.dylib $out/lib/
-        cp vmm.dylib $out/lib/
-        cp vmmyara.dylib $out/lib/
+        # 建立符号链接
+        ln -s ../share/memprocfs/memprocfs $out/bin/memprocfs
 
-        # 插件
-        cp plugins/m_vmemd.dylib $out/lib/plugins/
-
-        # 其他资源文件
-        cp info.db memprocfs.icns vmmdll.h LICENSE.txt $out/share/memprocfs/
-        cp license_*.txt license_info_all.txt $out/share/memprocfs/
+        chmod +x $out/share/memprocfs/memprocfs
     '';
-    postInstall = ''
-        for bin in $out/bin/memprocfs; do
-            echo "fixing $bin"
-            install_name_tool -add_rpath "$out/lib" "$bin"
-        done
 
-        for libfile in $out/lib/*.dylib; do
-            echo "🔧 fixing $libfile"
-            install_name_tool -id "$out/lib/$(basename $libfile)" "$libfile"
-            for dep in $out/lib/*.dylib; do
-            name=$(basename $dep)
-            install_name_tool -change "@rpath/$name" "$out/lib/$name" "$libfile" 2>/dev/null || true
-            done
-        done
-
-        for dep in $out/lib/*.dylib; do
-            name=$(basename $dep)
-            install_name_tool -change "@rpath/$name" "$out/lib/$name" "$out/bin/memprocfs" 2>/dev/null || true
-        done
-    '';
 
     meta = with lib; {
         description = "MemprocFS prebuilt binary for macOS (Darwin)";
