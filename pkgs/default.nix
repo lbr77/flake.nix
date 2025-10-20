@@ -5,4 +5,5 @@
   picgo = pkgs.callPackage ./picgo.nix {};
   fscan = pkgs.callPackage ./fscan.nix {};
   codex = pkgs.callPackage ./codex.nix {};
+  memprocfs = pkgs.callPackage ./memprocfs.nix {};
 }
