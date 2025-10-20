@@ -20,7 +20,7 @@ stdenv.mkDerivation rec {
     unpackPhase = ''
         mkdir source
         cd source
-        unzip $src
+        unzip $src || true
     '';
 
     installPhase = ''
