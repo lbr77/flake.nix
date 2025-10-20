@@ -47,8 +47,24 @@ stdenv.mkDerivation rec {
         cp license_*.txt license_info_all.txt $out/share/memprocfs/
     '';
     postInstall = ''
-        wrapProgram $out/bin/memprocfs \
-        --set DYLD_LIBRARY_PATH "$out/lib"
+        for bin in $out/bin/memprocfs; do
+            echo "fixing $bin"
+            install_name_tool -add_rpath "$out/lib" "$bin"
+        done
+
+        for libfile in $out/lib/*.dylib; do
+            echo "🔧 fixing $libfile"
+            install_name_tool -id "$out/lib/$(basename $libfile)" "$libfile"
+            for dep in $out/lib/*.dylib; do
+            name=$(basename $dep)
+            install_name_tool -change "@rpath/$name" "$out/lib/$name" "$libfile" 2>/dev/null || true
+            done
+        done
+
+        for dep in $out/lib/*.dylib; do
+            name=$(basename $dep)
+            install_name_tool -change "@rpath/$name" "$out/lib/$name" "$out/bin/memprocfs" 2>/dev/null || true
+        done
     '';
 
     meta = with lib; {
