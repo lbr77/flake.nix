@@ -23,6 +23,7 @@
     codex
     claude-code
     ripgrep
+    xcbeautify
     memprocfs
   ];
   environment.variables.EDITOR = "nvim";
