@@ -2,24 +2,24 @@
     lib,
     stdenv,
     fetchurl,
-    gnutar,
+    unzip,
 }:
 
 stdenv.mkDerivation rec {
-    pname = "codex";
-    version = "rust-v0.47.0";
-
+    pname = "MemProcFS";
+    version = "v5.16";
+    
     src = fetchurl {
-        url = "https://github.com/openai/codex/releases/download/${version}/codex-aarch64-apple-darwin.tar.gz";
-        sha256 = "sha256-Prg0zkvb1+Y/j5LI8UChzmHx6+0037MbGaAz2/scwgE=";
+        url = "https://github.com/ufrisk/MemProcFS/releases/download/${version}/MemProcFS_files_and_binaries_${version}.3-macOS-20251016.zip";
+        sha256 = lib.fakeSha256;
     };
 
-    nativeBuildInputs = [ gnutar ];
+    nativeBuildInputs = [ unzip ];
 
     unpackPhase = ''
         mkdir source
         cd source
-        tar -xzf $src
+        unzip $src
     '';
 
     installPhase = ''
@@ -29,10 +29,10 @@ stdenv.mkDerivation rec {
     '';
 
     meta = with lib; {
-        description = "Codex prebuilt binary for macOS (Darwin)";
+        description = "MemprocFS prebuilt binary for macOS (Darwin)";
         homepage = "https://github.com/openai/codex";
         license = licenses.mit;
-        mainProgram = "codex";
+        mainProgram = "memprocfs";
         platforms = platforms.darwin;
     };
 }
