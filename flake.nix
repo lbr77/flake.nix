@@ -35,7 +35,7 @@
 
     # 创建自定义包的 overlay
     pkgsOverlay = final: prev: let
-      customPkgs = import ./pkgs {pkgs = prev;};
+      customPkgs = import ./pkgs {pkgs = prev;inherit username useremail;};
     in
       customPkgs;
 
