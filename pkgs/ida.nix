@@ -10,7 +10,7 @@ stdenvNoCC.mkDerivation rec {
     version = "9.1";
 
     src = fetchurl {
-        url = "https://vaclive.party/software/ida-pro/releases/download/9.1.250226/ida-pro_91_x64mac.app.zip";
+        url = "https://vaclive.party/software/ida-pro/releases/download/9.1.250226/ida-pro_91_armmac.app.zip";
         sha256 = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
     };
     nativeBuildInputs = [ unzip ];
@@ -18,7 +18,7 @@ stdenvNoCC.mkDerivation rec {
     installPhase = ''
         runHook preInstall
         mkdir -p $out/Applications
-        ./*.app/Contents/MacOS/installbuilder.sh --mode unattended --unattendedmodeui none --prefix $out/Applications/ida-pro-9.1
+        ./ida-pro_91_armmac.app/Contents/MacOS/installbuilder.sh --mode unattended --unattendedmodeui none --prefix $out/Applications/IDA\ Professional\ 9.1
         runHook postInstall
     '';
     meta = with lib; {
