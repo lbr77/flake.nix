@@ -11,7 +11,7 @@ stdenvNoCC.mkDerivation rec {
 
     src = fetchurl {
         url = "https://vaclive.party/software/ida-pro/releases/download/9.1.250226/ida-pro_91_armmac.app.zip";
-        sha256 = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+        sha256 = "sha256-jZF6lelsic4ASEguO6W9WW1P5/t3AOe/4F7GIfr1NaA=";
     };
     nativeBuildInputs = [ unzip ];
     sourceRoot = ".";
