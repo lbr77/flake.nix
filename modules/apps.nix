@@ -10,6 +10,7 @@
     ffmpeg
     wget
     nodejs
+    ida
     pnpm
     bun
     torrent-vibe

@@ -6,4 +6,5 @@
   fscan = pkgs.callPackage ./fscan.nix {};
   codex = pkgs.callPackage ./codex.nix {};
   memprocfs = pkgs.callPackage ./memprocfs.nix {};
+  ida = pkgs.callPackage ./ida.nix {};
 }
