@@ -12,6 +12,7 @@
     nodejs
     ida
     pnpm
+    perl
     bun
     torrent-vibe
     spicetify-cli
