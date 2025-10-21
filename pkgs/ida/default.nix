@@ -21,7 +21,9 @@ stdenvNoCC.mkDerivation rec {
     installPhase = ''
         runHook preInstall
         mkdir -p $out/Applications
-        ./ida-pro_91_armmac.app/Contents/MacOS/installbuilder.sh --mode unattended --unattendedmodeui none --prefix $out/Applications/IDA\ Professional\ 9.1
+        echo "Installing IDA Pro..."
+        ./ida-pro_91_armmac.app/Contents/MacOS/installbuilder.sh --mode unattended --unattendedmodeui none --prefix $out/Applications/IDA\ Professional\ 9.1.app
+
         runHook postInstall
     '';
     postInstall = ''
