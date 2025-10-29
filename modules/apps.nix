@@ -50,7 +50,6 @@
       "wget" 
       "flowdown"
       "mono-mdk"
-      "renode"
       "curl" 
       "cmake" # Fuck you apple. 
       "aria2"
