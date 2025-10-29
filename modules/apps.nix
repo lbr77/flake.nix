@@ -48,8 +48,6 @@
 
     brews = [
       "wget" 
-      "flowdown"
-      "mono-mdk"
       "curl" 
       "cmake" # Fuck you apple. 
       "aria2"
@@ -70,6 +68,10 @@
       "google-chrome"
       "visual-studio-code"
       "alt-tab"
+
+      "flowdown"
+
+      "mono-mdk"
       "feishu"
       "macfuse" 
       "orbstack"
