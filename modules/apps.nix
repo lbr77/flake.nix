@@ -10,7 +10,7 @@
     ffmpeg
     wget
     nodejs
-    ida
+    coreutils-full
     pnpm
     perl
     bun
@@ -25,6 +25,10 @@
     codex
     claude-code
     ripgrep
+    binwalk
+    openocd
+    pandoc
+    imagemagick
     xcbeautify
     memprocfs
   ];
@@ -44,6 +48,9 @@
 
     brews = [
       "wget" 
+      "flowdown"
+      "mono-mdk"
+      "renode"
       "curl" 
       "cmake" # Fuck you apple. 
       "aria2"
