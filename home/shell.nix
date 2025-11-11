@@ -10,6 +10,8 @@
       source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
       # source $(brew --prefix)/share/zsh-completions/
       export PATH="/opt/homebrew/Cellar/python@3.13/3.13.8/bin:$PATH"
+      export THEOS=/opt/theos
+      export PATH=/opt/theos/bin/:$PATH
     '';
   };
 
