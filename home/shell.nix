@@ -12,7 +12,7 @@
       export PATH="/opt/homebrew/Cellar/python@3.13/3.13.8/bin:$PATH"
       export THEOS="/opt/theos"
       export PATH="/opt/theos/bin/:$PATH"  
-      echo PATH="$(brew --prefix make)/libexec/gnubin:$PATH"
+      export PATH="$(brew --prefix make)/libexec/gnubin:$PATH"
     '';
   };
 
