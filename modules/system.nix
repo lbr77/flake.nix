@@ -148,7 +148,7 @@
     sleep = {
       allowSleepByPowerButton = true; # allow sleep by power button
       computer = "never"; # sleep after () minutes of inactivity (never !)
-      display = 15; # turn off display after () minutes of inactivity
+      display = "never"; # turn off display after () minutes of inactivity
     };
   };
 
