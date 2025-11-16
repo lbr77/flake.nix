@@ -3,13 +3,13 @@
     enable = true;
     enableCompletion = true;
     initContent = ''
+      export PATH="/opt/homebrew/Cellar/python@3.13/3.13.8/bin:$PATH"
       export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin"
       export PATH="/Library/TeX/texbin:$PATH"
       [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && source $(brew --prefix)/etc/profile.d/autojump.sh
       source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
       source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
       # source $(brew --prefix)/share/zsh-completions/
-      export PATH="/opt/homebrew/Cellar/python@3.13/3.13.8/bin:$PATH"
       export THEOS="/opt/theos"
       export PATH="/opt/theos/bin/:$PATH"  
       export PATH="$(brew --prefix make)/libexec/gnubin:$PATH"
