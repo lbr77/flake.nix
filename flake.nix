@@ -35,9 +35,34 @@
 
     # 创建自定义包的 overlay
     pkgsOverlay = final: prev: let
-      customPkgs = import ./pkgs {pkgs = prev;inherit username useremail;};
+      inherit (prev) lib;
+      pkgsDir = ./pkgs;
+      entries = builtins.readDir pkgsDir;
+      entryNames = builtins.attrNames entries;
+      pkgArgs = {
+        inherit username useremail;
+      };
+      callPkg = lib.callPackageWith (prev // pkgArgs);
+
+      nixFiles =
+        builtins.listToAttrs
+        (map
+          (file: {
+            name = lib.removeSuffix ".nix" file;
+            value = callPkg (pkgsDir + "/${file}") {};
+          })
+          (lib.filter (name: entries.${name} == "regular" && lib.hasSuffix ".nix" name && name != "default.nix") entryNames));
+
+      nixDirs =
+        builtins.listToAttrs
+        (map
+          (dir: {
+            name = dir;
+            value = callPkg (pkgsDir + "/${dir}") {};
+          })
+          (lib.filter (name: entries.${name} == "directory" && builtins.pathExists (pkgsDir + "/${name}/default.nix")) entryNames));
     in
-      customPkgs;
+      nixFiles // nixDirs;
 
     specialArgs =
       inputs

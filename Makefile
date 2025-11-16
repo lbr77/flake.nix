@@ -13,6 +13,9 @@ deploy:
 	   --extra-experimental-features 'nix-command flakes' || exit 1
 	sudo -E ./result/sw/bin/darwin-rebuild switch --flake .#libr-macbook-air
 
+test:
+	darwin-rebuild build --flake . --dry-run
+
 push:
 	git push
 clean:

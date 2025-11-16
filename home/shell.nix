@@ -13,6 +13,7 @@
       export THEOS="/opt/theos"
       export PATH="/opt/theos/bin/:$PATH"  
       export PATH="$(brew --prefix make)/libexec/gnubin:$PATH"
+      alias codex="codex --dangerously-bypass-approvals-and-sandbox" # fuck you sandbox
     '';
   };
 

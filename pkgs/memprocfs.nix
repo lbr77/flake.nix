@@ -38,7 +38,7 @@ stdenv.mkDerivation rec {
 
     meta = with lib; {
         description = "MemprocFS prebuilt binary for macOS (Darwin)";
-        homepage = "https://github.com/openai/codex";
+        homepage = "https://github.com/ufrisk/MemProcFS";
         license = licenses.mit;
         mainProgram = "memprocfs";
         platforms = platforms.darwin;
