@@ -20,7 +20,6 @@
     jadx
     picgo
     pwntools
-    swiftformat
     fscan
     codex
     claude-code
@@ -59,6 +58,8 @@
       "zsh-completions"
       "terminal-notifier"
 
+
+      "swiftformat"
       "python@3.13"
       "unicorn"
 
