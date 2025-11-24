@@ -11,7 +11,7 @@ stdenv.mkDerivation rec {
 
     src = fetchurl {
         url = "https://github.com/openai/codex/releases/download/${version}/codex-aarch64-apple-darwin.tar.gz";
-        sha256 = lib.fakeSha256;
+        sha256 = "sha256-p6Zsj+EyxWNM3/zLefO7Z+p9SH2dEFLoGPsLpWp+HoY=";
     };
 
     nativeBuildInputs = [ gnutar ];
