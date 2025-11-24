@@ -12,6 +12,7 @@
     nodejs
     coreutils-full
     pnpm
+    ext4fuse
     perl
     bun
     torrent-vibe
