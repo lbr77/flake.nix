@@ -6,7 +6,7 @@
     neovim
     git
     cmake
-    sketchybar
+    # sketchybar
     uv
     ffmpeg
     wget
