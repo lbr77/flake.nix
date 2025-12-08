@@ -6,6 +6,7 @@
     neovim
     git
     cmake
+    sketchybar
     uv
     ffmpeg
     wget
@@ -30,7 +31,6 @@
     pandoc
     imagemagick
     xcbeautify
-    memprocfs
   ];
   environment.variables.EDITOR = "nvim";
 
