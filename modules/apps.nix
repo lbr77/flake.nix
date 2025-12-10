@@ -6,9 +6,13 @@
     neovim
     git
     cmake
+    curl 
+    aria2
     # sketchybar
+    go
     uv
     ffmpeg
+    autojump
     wget
     nodejs
     coreutils-full
@@ -31,6 +35,15 @@
     pandoc
     imagemagick
     xcbeautify
+    xquartz
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+    zsh-completions
+    terminal-notifier
+    swiftformat
+    python313
+    unicorn
+    python313Packages.unicorn
   ];
   environment.variables.EDITOR = "nvim";
 
@@ -47,27 +60,10 @@
     };
 
     brews = [
-      "wget" 
-      "curl" 
-      "cmake" # Fuck you apple. 
-      "aria2"
-      "go"
-      "rsync"
-      "autojump"
-      "zsh-autosuggestions"
-      "zsh-syntax-highlighting"
-      "zsh-completions"
-      "terminal-notifier"
-
-
-      "swiftformat"
-      "python@3.13"
-      "unicorn"
-
     ];
 
     casks = [
-      "google-chrome"
+      "microsoft-edge"
       "visual-studio-code"
       "alt-tab"
 
