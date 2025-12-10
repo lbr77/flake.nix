@@ -43,6 +43,8 @@
     python313
     unicorn
     python313Packages.unicorn
+    python313Packages.pwntools
+    javaPackages.compiler.openjdk17
   ];
   environment.variables.EDITOR = "nvim";
 
