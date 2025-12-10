@@ -35,7 +35,6 @@
     pandoc
     imagemagick
     xcbeautify
-    xquartz
     zsh-autosuggestions
     zsh-syntax-highlighting
     zsh-completions
@@ -68,7 +67,7 @@
       "alt-tab"
 
       "flowdown"
-
+      "xquartz"
       "mono-mdk"
       "feishu"
       "macfuse" 
