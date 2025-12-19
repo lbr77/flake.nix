@@ -28,6 +28,7 @@
     pwntools
     fscan
     codex
+    codex-acp
     claude-code
     ripgrep
     binwalk
