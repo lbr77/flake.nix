@@ -11,8 +11,8 @@ stdenv.mkDerivation rec {
 
     src = fetchurl {
         url = "https://github.com/zed-industries/codex-acp/releases/download/v${version}/codex-acp-${version}-aarch64-apple-darwin.tar.gz";
-        # sha256 = "sha256-/lFdzc6/gj3NokO48V08k4oabbehuyG6z69VYK/Ttns=";
-        sha256 = lib.fakeSha256;
+        sha256 = "sha256-HOjzSEYNs1eM7l4EfOTJZAYnJJxiPd7SnMxdLeYLH6c=";
+        # sha256 = lib.fakeSha256;
     };
 
     nativeBuildInputs = [ gnutar ];
