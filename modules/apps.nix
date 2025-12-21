@@ -42,7 +42,12 @@
     terminal-notifier
     swiftformat
     python313
+    uv
     unicorn
+    python313Packages.pip
+    python313Packages.setuptools
+    python313Packages.angr
+    python313Packages.angrop
     python313Packages.unicorn
     python313Packages.pwntools
     javaPackages.compiler.openjdk17
