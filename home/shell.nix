@@ -14,7 +14,7 @@
       export PATH="/opt/theos/bin/:$PATH"  
       export PATH="$(brew --prefix make)/libexec/gnubin:$PATH"
       export PATH="/Users/libr/.bun/bin:$PATH"
-      export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+      export PATH="$(brew --prefix llvm)/bin:$PATH"
       alias codex="codex --dangerously-bypass-approvals-and-sandbox" # fuck you sandbox
     '';
   };
