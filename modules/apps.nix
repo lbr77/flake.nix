@@ -23,7 +23,6 @@
     torrent-vibe
     spicetify-cli
     android-tools
-    jadx
     picgo
     pwntools
     fscan
@@ -67,6 +66,7 @@
     };
 
     brews = [
+      "jadx"
     ];
 
     casks = [
