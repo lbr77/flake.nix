@@ -7,6 +7,7 @@ let
     angrop
     unicorn
     pwntools
+    pyshark
   ]);
 in {
   nixpkgs.config.allowUnfree = true;
