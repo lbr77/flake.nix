@@ -40,15 +40,16 @@
     zsh-completions
     terminal-notifier
     swiftformat
-    python313
+    (python313.withPackages (ps: with ps; [
+      pip
+      setuptools
+      angr
+      angrop
+      unicorn
+      pwntools
+    ]))
     uv
     unicorn
-    python313Packages.pip
-    python313Packages.setuptools
-    python313Packages.angr
-    python313Packages.angrop
-    python313Packages.unicorn
-    python313Packages.pwntools
     javaPackages.compiler.openjdk17
   ];
   environment.variables.EDITOR = "nvim";
