@@ -1,6 +1,6 @@
 { pkgs, ... }:
 let
-  pyEnv = pkgs.python313.withPackages (ps: with ps; [
+  pyEnv = pkgs.python313.withPackages (ps: (with ps; [
     pip
     setuptools
     angr
@@ -8,6 +8,8 @@ let
     unicorn
     pwntools
     pyshark
+  ]) ++ [
+    pkgs.headless-ida
   ]);
 in {
   nixpkgs.config.allowUnfree = true;
@@ -19,6 +21,7 @@ in {
     curl 
     aria2
     # sketchybar
+    detect-it-easy
     go
     uv
     ffmpeg
