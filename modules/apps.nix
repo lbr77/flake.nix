@@ -1,5 +1,14 @@
 { pkgs, ... }:
-{
+let
+  pyEnv = pkgs.python313.withPackages (ps: with ps; [
+    pip
+    setuptools
+    angr
+    angrop
+    unicorn
+    pwntools
+  ]);
+in {
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
@@ -40,19 +49,13 @@
     zsh-completions
     terminal-notifier
     swiftformat
-    (python313.withPackages (ps: with ps; [
-      pip
-      setuptools
-      angr
-      angrop
-      unicorn
-      pwntools
-    ]))
+    pyEnv
     uv
     unicorn
     javaPackages.compiler.openjdk17
   ];
   environment.variables.EDITOR = "nvim";
+  environment.variables.PYTHONPATH = "${pyEnv}/${pyEnv.sitePackages}";
 
   homebrew = {
     enable = true;
