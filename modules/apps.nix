@@ -8,9 +8,7 @@ let
     unicorn
     pwntools
     pyshark
-  ]) ++ [
-    pkgs.headless-ida
-  ]);
+  ]));
 in {
   nixpkgs.config.allowUnfree = true;
 
