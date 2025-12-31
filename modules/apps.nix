@@ -21,7 +21,7 @@ in {
     curl 
     aria2
     # sketchybar
-    detect-it-easy
+    
     go
     uv
     ffmpeg
