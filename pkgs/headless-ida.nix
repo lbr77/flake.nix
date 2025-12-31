@@ -10,9 +10,8 @@ python313Packages.buildPythonPackage rec {
   pyproject = true;
 
   src = fetchPypi {
-    pname = "headless-ida";
+    pname = "headless_ida";
     version = version;
-    pypiName = "headless_ida";
     sha256 = "sha256-qCFyP1Bay5FK+0NQbIWahCc9OpM6pzKGrSpaBB7FnDk=";
   };
 
