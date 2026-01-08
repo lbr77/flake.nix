@@ -51,13 +51,13 @@ in {
     zsh-completions
     terminal-notifier
     swiftformat
-    pyEnv
+    # pyEnv
     uv
     unicorn
     javaPackages.compiler.openjdk17
   ];
   environment.variables.EDITOR = "nvim";
-  environment.variables.PYTHONPATH = "${pyEnv}/${pyEnv.sitePackages}";
+  # environment.variables.PYTHONPATH = "${pyEnv}/${pyEnv.sitePackages}";
 
   homebrew = {
     enable = true;
