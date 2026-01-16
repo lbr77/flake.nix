@@ -7,7 +7,7 @@
 
 stdenv.mkDerivation rec {
     pname = "codex";
-    version = "rust-v0.8.0";
+    version = "rust-v0.86.0";
 
     src = fetchurl {
         url = "https://github.com/openai/codex/releases/download/${version}/codex-aarch64-apple-darwin.tar.gz";
