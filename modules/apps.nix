@@ -80,7 +80,7 @@ in {
       "visual-studio-code"
       "alt-tab"
 
-      "flowdown"
+      # "flowdown"
       "xquartz"
       "mono-mdk"
       "feishu"
