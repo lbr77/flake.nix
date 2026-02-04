@@ -3,20 +3,21 @@
     enable = true;
     enableCompletion = true;
     initContent = ''
-      export PATH="/opt/homebrew/Cellar/python@3.13/3.13.8/bin:$PATH"
+      # export PATH="/opt/homebrew/Cellar/python@3.13/3.13.8/bin:$PATH"
       export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin"
       export PATH="/Library/TeX/texbin:$PATH"
-      [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && source $(brew --prefix)/etc/profile.d/autojump.sh
-      source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-      source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-      # source $(brew --prefix)/share/zsh-completions/
+      # [[ -s /opt/zerobrew/prefix/etc/profile.d/autojump.sh ]] && source /opt/zerobrew/prefix/etc/profile.d/autojump.sh
+      source /opt/zerobrew/prefix/share/autojump/autojump.zsh
+      source /opt/zerobrew/prefix/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+      source /opt/zerobrew/prefix/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+      # source /opt/zerobrew/prefix/share/share/zsh-completions/
       export THEOS="/opt/theos"
       export PATH="/opt/theos/bin/:$PATH"  
       export PATH="$(brew --prefix make)/libexec/gnubin:$PATH"
       export PATH="/Users/libr/.bun/bin:$PATH"
       export PATH="$(brew --prefix llvm)/bin:$PATH"
       alias codex="codex --dangerously-bypass-approvals-and-sandbox" # fuck you sandbox
-      export PATH="/opt/zerobrew/prefix/bin:$PATH"
+      # export PATH="/opt/zerobrew/prefix/bin:$PATH"
       # if command -v wt >/dev/null 2>&1; then eval "$(command wt config shell init zsh)"; fi
       export PATH="$HOME/.cargo/bin:$PATH"
     '';
