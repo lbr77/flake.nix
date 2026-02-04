@@ -16,7 +16,8 @@
       export PATH="/Users/libr/.bun/bin:$PATH"
       export PATH="$(brew --prefix llvm)/bin:$PATH"
       alias codex="codex --dangerously-bypass-approvals-and-sandbox" # fuck you sandbox
-      if command -v wt >/dev/null 2>&1; then eval "$(command wt config shell init zsh)"; fi
+      export PATH="/opt/zerobrew/prefix/bin:$PATH"
+      # if command -v wt >/dev/null 2>&1; then eval "$(command wt config shell init zsh)"; fi
       export PATH="$HOME/.cargo/bin:$PATH"
     '';
   };
