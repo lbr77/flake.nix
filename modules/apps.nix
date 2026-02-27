@@ -39,7 +39,6 @@ in {
     fscan
     codex
     codex-acp
-    claude-code
     ripgrep
     binwalk
     openocd
